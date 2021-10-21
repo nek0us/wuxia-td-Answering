@@ -1,0 +1,17 @@
+time
+sys
+PIL
+os
+win32gui
+win32ui
+win32con
+win32api
+cv2
+AipOcr
+requests
+re
+_tkinter
+tkinter
+urllib
+io
+base64
