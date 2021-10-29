@@ -1,18 +1,12 @@
 一： 如何使用
 
-1. 需要百度识别API，[申请方法](https://blog.csdn.net/fangdengfu123/article/details/83417919)
-
-	
-2. 将API的token信息填入config.py中
-	
-	
-![image](https://github.com/nek0us/wuxia-td-Answering/blob/master/res/img1.png)
+1. 安装所需要的包文件
 
 
-3. 运行  py3 wuxia_td_Answering.py
+2. 运行  py3 main.py
 	
 	
-4. [二进制文件下载](https://nekous.cn/td/datiqiv1.4.exe)
+#4. [二进制文件下载](https://nekous.cn/td/datiqiv1.4.exe) 暂时无法使用 请使用源码版本
 	
 	
 二：注意事项
