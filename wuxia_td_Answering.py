@@ -1,24 +1,18 @@
 #coding=utf-8
-import time
-import sys
-from PIL import Image,ImageGrab
 import os,win32gui, win32ui, win32con, win32api
 import cv2
 import requests
 import re
-import _tkinter
 import tkinter
-from tkinter import StringVar, IntVar
-from tkinter import Tk, Checkbutton, Label,Text,Button,PhotoImage
-from tkinter.messagebox import showinfo
+from tkinter import Button
 import tkinter as tk
 from PIL import Image, ImageTk
 from urllib.request import urlopen
 import io
 import base64
-import config
 from tiku import tk
 from tiku import img
+from config import client
 #from tkinter import  *
 #以上为导入的python库
 
@@ -78,10 +72,8 @@ def findtext(buttongj,ck): #初次匹配题库
     image = get_file_content("b.jpg") #打开裁剪
 
     try:
-        txt = client.basicGeneral(image) #识别裁剪
-        words_result = txt['words_result'] #读取识别
-        words_result = words_result[0] #优化识别
-        words = words_result['words']
+        txt = client.readtext(image, detail = 0) #识别裁剪
+        words = txt[0]
         words = words.replace(",","，")  #优化识别
         words = words.replace(".","。")  #优化识别
         words = words.replace(":","：")  #优化识别
@@ -124,13 +116,11 @@ def sb2(buttongj,ck): #二次匹配题库 同上
             cv2.imwrite("b.jpg",cropImg)   #保存裁剪
 
         image = get_file_content("b.jpg")
-        txt = client.basicGeneral(image)
-        words_result = txt['words_result']
-        words_result = words_result[0]
-        words = words_result['words']
-        words = words.replace(",","，")
-        words = words.replace(".","。")
-        words = words.replace(":","：")
+        txt = client.readtext(image, detail = 0) #识别裁剪
+        words = txt[0]
+        words = words.replace(",","，")  #优化识别
+        words = words.replace(".","。")  #优化识别
+        words = words.replace(":","：")  #优化识别
         for x in tk:
             searchObj = re.search(words,x)
             if searchObj!= None:
@@ -168,13 +158,11 @@ def sb3(buttongj,ck): #三次匹配题库 同上
             cv2.imwrite("b.jpg",cropImg)   #保存裁剪
 
         image = get_file_content("b.jpg")
-        txt = client.basicGeneral(image)
-        words_result = txt['words_result']
-        words_result = words_result[0]
-        words = words_result['words']
-        words = words.replace(",","，")
-        words = words.replace(".","。")
-        words = words.replace(":","：")
+        txt = client.readtext(image, detail = 0) #识别裁剪
+        words = txt[0]
+        words = words.replace(",","，")  #优化识别
+        words = words.replace(".","。")  #优化识别
+        words = words.replace(":","：")  #优化识别
         for x in tk:
             searchObj = re.search(words,x)
             if searchObj!= None:

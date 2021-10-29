@@ -1,7 +1,3 @@
-from aip import AipOcr
+import easyocr
 
-
-APP_ID = ''
-API_KEY = ''
-SECRET_KEY = ''
-client = AipOcr(APP_ID, API_KEY, SECRET_KEY)   #°Ù¶ÈAIapi
+client = easyocr.Reader(['ch_sim'])
