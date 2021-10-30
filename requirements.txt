@@ -1,7 +1,7 @@
-requests
-opencv-python
-pywin32
-pillow
-easyocr
-re
-urllib
+config==0.5.1
+easyocr==1.4.1
+opencv_python_headless==4.5.4.58
+Pillow==8.4.0
+pywin32==302
+requests==2.26.0
+win32gui==221.6
