@@ -3,8 +3,9 @@
 一： 如何使用
 
 1. 安装所需要的包文件
+2. （推荐，不装也行）安装CUDA [（如何安装）](https://zhuanlan.zhihu.com/p/94220564?utm_source=wechat_session&ivk_sa=1024320u)
 
-2.（推荐，不装也行）安装CUDA [（如何安装）](https://zhuanlan.zhihu.com/p/94220564?utm_source=wechat_session&ivk_sa=1024320u)
+
 
 
 3. 运行  py3 main.py
